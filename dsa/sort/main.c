@@ -44,6 +44,11 @@ int main() {
     copyArray(temp, array, n);
     selectionSort(temp, n);
     printArray(temp, n);
+
+    // Copy array and sort with Shell Sort and print
+    copyArray(temp, array, n);
+    shellSort(temp, n);
+    printArray(temp, n);
     
     free(temp);
     free(array);
