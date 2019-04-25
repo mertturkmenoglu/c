@@ -1,0 +1,22 @@
+Compile time: 
+
+main.c: In function ‘function’:
+main.c:5:12: warning: function declared ‘noreturn’ has a ‘return’ statement
+     return "Returns a string literal";
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:5:12: warning: ‘return’ with a value, in function returning void
+main.c:4:16: note: declared here
+ _Noreturn void function() {
+                ^~~~~~~~
+main.c:5:12: warning: ‘noreturn’ function does return
+     return "Returns a string literal";
+
+Runtime:
+
+Program starts.
+
+---------------------------------------------------------------------
+Runtime: 
+
+Program starts.
+Prints a string literal
