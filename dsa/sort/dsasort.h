@@ -7,5 +7,7 @@ void selectionSort(int *array, int n);
 void shellSort(int *array,int n);
 void mergeSort(int *array, int start, int end);
 void merge(int *array, int start, int mid, int end);
+void quickSort(int *array, int start, int end);
+int partition(int *array, int start, int end);
 
 #endif

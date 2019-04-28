@@ -45,6 +45,11 @@ int main() {
     mergeSort(temp, 0, n-1);
     printArray("Merge sort: ", temp, n);
 
+     // Copy array and sort with Quick Sort and print
+    copyArray(temp, array, n);
+    quickSort(temp, 0, n-1);
+    printArray("Quick sort: ", temp, n);
+
     // Copy array and sort with Selection Sort and print
     copyArray(temp, array, n);
     selectionSort(temp, n);
