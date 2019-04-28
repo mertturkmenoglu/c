@@ -8,6 +8,9 @@ bubbleSort.o: bubbleSort.c $(HEADERS)
 insertionSort.o: insertionSort.c $(HEADERS)
 	gcc -c insertionSort.c -o insertionSort.o
 
+mergeSort.o: mergeSort.c $(HEADERS)
+	gcc -c mergeSort.c -o mergeSort.o
+
 selectionSort.o: selectionSort.c $(HEADERS)
 	gcc -c selectionSort.c -o selectionSort.o
 
@@ -17,13 +20,14 @@ shellSort.o: shellSort.c $(HEADERS)
 main.o: main.c $(HEADERS)
 	gcc -c main.c -o main.o
 
-main: main.o selectionSort.o insertionSort.o bubbleSort.o shellSort.o
-	gcc main.o selectionSort.o insertionSort.o bubbleSort.o shellSort.o -o sort
+main: main.o bubbleSort.o insertionSort.o mergeSort.o selectionSort.o shellSort.o
+	gcc main.o bubbleSort.o insertionSort.o mergeSort.o selectionSort.o shellSort.o -o sort
 
 clean:
 	-rm -f main.o
-	-rm -f selectionSort.o
-	-rm -f insertionSort.o
 	-rm -f bubbleSort.o
+	-rm -f insertionSort.o
+	-rm -f mergeSort.o
+	-rm -f selectionSort.o
 	-rm -f shellSort.o
 	-rm -f sort
