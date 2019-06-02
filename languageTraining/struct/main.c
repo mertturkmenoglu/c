@@ -20,7 +20,7 @@ struct BookClass {
     void (*printBookInfo)(void);
 };
 
-typedef struct BookClass BookObject;
+typedef struct BookClass* BookObject;
 struct BookClass *instance;
 
 char* getAuthor() {
@@ -64,7 +64,7 @@ struct BookClass *Book(int pageNumber, char* author) {
 
 
 int main() {
-    BookObject* var = Book(102, "Yasar Kemal");
+    BookObject var = Book(102, "Yasar Kemal");
     var->printBookInfo();
     var->deBook();
     return 0;
